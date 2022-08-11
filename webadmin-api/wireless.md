@@ -16,6 +16,7 @@
  Response 200 
  ```json
  {
+   "status": true,
    "ssid": "Sala",
    "hide_ssid": false,
    "hw_mode": "g",
@@ -52,6 +53,7 @@
  Response 200 
  ```json
  {
+  "status": true,
   "ssid": "Sala",
   "hide_ssid": false,
   "hw_mode": "g",
