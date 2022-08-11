@@ -38,7 +38,7 @@
 </details>
 
 <details close="close">
-<summary><b>POST</b> /private/api/settings/status</summary>
+<summary><b>POST</b> /private/api/settings/hostapd</summary>
 
  ---
 
