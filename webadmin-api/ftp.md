@@ -29,7 +29,6 @@
  |     401      | Token invalid              |
  |     410      | Token expired or incorrect |
 
- - Note: `try_attempt` is unsigned integer 8 bit and is retry counter; `attempt_interval` is unsigned integer 64bit and is time as seconds
  ---
 </details>
 
@@ -63,6 +62,10 @@
  |     410      | Token expired or incorrect |
  |     500      | actual_error_goes_here     |
 
+ - Note: `try_attempt` is unsigned integer 8 bit and is retry counter; `attempt_interval` is unsigned integer 64bit and is time as seconds
+ 
  ---
+
+
 
 </details>
