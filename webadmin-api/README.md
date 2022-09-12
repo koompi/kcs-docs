@@ -7,4 +7,5 @@
 *   Wireless Page [Details](wireless.md)
 *   DNS Page [Details](dns/)
 *   Storage Page [Details](storage.md)
+*   Synchronisation Page [Details](ftp.md)
 *   Settings Page [Details](settings/)
