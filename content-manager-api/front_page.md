@@ -9,7 +9,7 @@
  | ---------------- | --------------------------------------- |
  |      None        |                   None                  |
 
- | Query Parameters |                                       Data Type                                          |
+ | Query Parameters |        ~                               Data Type                                          |
  | ---------------- | ---------------------------------------------------------------------------------------- |
  |      grade       |                                     1, 2, 3, 4, 5, 6                                     |
  |     subjects     | Art, BasicPL, English, French, ICT, MindMotion, PE, PreMath, PreWriting, Science, Social |
@@ -43,7 +43,9 @@
      "thumbnail": {
        "thumbnail_name": "uhBnWnu=WGw1=sbYWssJ11=GWduWnnbZwhwdnl=wGwb==b=WGdJbZsGWlZuW1dubuhlJJ=WllBhwLB=sl=hsW1lu1lGGuL==LWWu.png",
        "thumbnail_location": "contents/Grade1/Art"
-     }
+     },
+     "grade_kh": "ថ្នាក់ទី១",
+     "subject_kh": "អប់រំសិល្បៈ"
    }
  ]
  ```
@@ -101,7 +103,9 @@
      "thumbnail": {
        "thumbnail_name": "uhBnWnu=WGw1=sbYWssJ11=GWduWnnbZwhwdnl=wGwb==b=WGdJbZsGWlZuW1dubuhlJJ=WllBhwLB=sl=hsW1lu1lGGuL==LWWu.png",
        "thumbnail_location": "contents/Grade1/Art"
-     }
+     },
+     "grade_kh": "ថ្នាក់ទី១",
+     "subject_kh": "អប់រំសិល្បៈ"
    }
  ]
  ```
@@ -155,7 +159,9 @@
      "thumbnail": {
        "thumbnail_name": "uhBnWnu=WGw1=sbYWssJ11=GWduWnnbZwhwdnl=wGwb==b=WGdJbZsGWlZuW1dubuhlJJ=WllBhwLB=sl=hsW1lu1lGGuL==LWWu.png",
        "thumbnail_location": "contents/Grade1/Art"
-     }
+     },
+     "grade_kh": "ថ្នាក់ទី១",
+     "subject_kh": "អប់រំសិល្បៈ"
    }
  ]
  ```
