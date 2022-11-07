@@ -80,7 +80,7 @@
 </details>
 
 <details close="close">
-<summary><b>DELETE</b> /private/api/delete/{grade}/{subject}</summary>
+<summary><b>DELETE</b> /private/api/delete/{grade}/{subject}/{file_id}</summary>
 
  ---
 
@@ -93,14 +93,14 @@
  | ---------------- | ---------------------------------------------------------------------------------------- |
  |      grade       |                                    1, 2, 3, 4, 5, 6                                      |
  |     subjects     | Art, BasicPL, English, French, ICT, MindMotion, PE, PreMath, PreWriting, Science, Social |
+ |     file_id      |                                         UUID                                             |
 
  | Query Parameters |                                       Data Type                                          |
  | ---------------- | ---------------------------------------------------------------------------------------- |
  |       None       |                                         None                                             | 
 
- Body (file_id)
+ Body
 ```json
-"76b4ff27-c39e-4ac8-b161-708f487b3f64"
 ```
 
  Response 200 
@@ -116,6 +116,7 @@
  - Note: 
    - `Authorization` Header value is `Bearer`
    - Only `exp` valid JWT will be allowed to use this API. Anything else is 410 or 401
+   - example of UUID: `"76b4ff27-c39e-4ac8-b161-708f487b3f64"`
 
  ---
 </details>
