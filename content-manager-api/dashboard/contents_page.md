@@ -44,6 +44,46 @@
 </details>
 
 <details close="close">
+<summary><b>DELETE</b> /private/api/delete/{file_id}</summary>
+
+ ---
+
+ |      Header      |                 Data Type               |
+ | ---------------- | --------------------------------------- |
+ |  Authorization   |                 `String`                |
+
+
+ | Query Parameters |                                       Data Type                                          |
+ | ---------------- | ---------------------------------------------------------------------------------------- |
+ |     file_id      |                                         UUID                                             |
+
+ | Query Parameters |                                       Data Type                                          |
+ | ---------------- | ---------------------------------------------------------------------------------------- |
+ |       None       |                                         None                                             | 
+
+ Body
+```json
+```
+
+ Response 200 
+ ```
+ ```
+
+ |     Error    |             Body           |
+ | ------------ | -------------------------- |
+ |     401      |             Gone           |
+ |     401      |          Unauthorized      |
+ |     500      |   actual_error_goes_here   |
+
+ - Note: 
+   - `Authorization` Header value is `Bearer`
+   - Only `exp` valid JWT will be allowed to use this API. Anything else is 410 or 401
+   - example of UUID: `"76b4ff27-c39e-4ac8-b161-708f487b3f64"`
+
+ ---
+</details>
+
+<details close="close">
 <summary><b>DELETE</b> /private/api/delete/{grade}/{subject}</summary>
 
  ---
