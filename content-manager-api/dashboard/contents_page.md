@@ -56,9 +56,9 @@
  | ---------------- | ---------------------------------------------------------------------------------------- |
  |       None       |                                         None                                             | 
 
- Body (filename)
+ Body (file_id)
 ```json
-"442++Zb4S64+B44664++684+4ZZSYZ46SB664B6ZP=Z446Z48P4=Z8ZaZL4Z64DgZ+66Z8+J4PSZ=4Z6ZAZAZ4UbZ+Ba6Z4ZPZ4Z.pdf"
+"76b4ff27-c39e-4ac8-b161-708f487b3f64"
 ```
 
  Response 200 
