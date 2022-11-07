@@ -44,13 +44,19 @@
 </details>
 
 <details close="close">
-<summary><b>DELETE</b> /private/api/delete</summary>
+<summary><b>DELETE</b> /private/api/delete/{grade}/{subject}</summary>
 
  ---
 
  |      Header      |                 Data Type               |
  | ---------------- | --------------------------------------- |
  |  Authorization   |                 `String`                |
+
+
+ | Query Parameters |                                       Data Type                                          |
+ | ---------------- | ---------------------------------------------------------------------------------------- |
+ |      grade       |                                    1, 2, 3, 4, 5, 6                                      |
+ |     subjects     | Art, BasicPL, English, French, ICT, MindMotion, PE, PreMath, PreWriting, Science, Social |
 
  | Query Parameters |                                       Data Type                                          |
  | ---------------- | ---------------------------------------------------------------------------------------- |
