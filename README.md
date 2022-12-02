@@ -7,4 +7,4 @@
 *   LCS Webadmin API [Details](webadmin-api/)
 *   LCS Content Manager API [Details](content-manager-api/)
 *   LCS Content Manager Front [Details](content-manager-interface/)
-*   Content Server Implementation Plans
+*   Content Server Implementation Plans [Details](content_server_plan.md)
