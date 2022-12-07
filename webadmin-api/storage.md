@@ -123,7 +123,7 @@
  | ---------------- | ---------------------------------------------------------- |
  |    item_name     |                  `String` eg. ឯកសារ.pdf                   |
  | parent_directory |                  `String` eg. rootdir/subdir               |
- |  drive_partuuid  | `String` eg. 078caa1a-1a37-d14f-a9d8-dde0c70201fb          |
+ |  drive_partuuid  |                  `String` eg. kmp                          |
  
  Body
  ```json
