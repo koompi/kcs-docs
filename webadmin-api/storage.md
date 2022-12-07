@@ -141,7 +141,7 @@
 </details>
 
 <details close="close">
-<summary><b>GET</b> /private/api/settings/storage/device/upload</summary>
+<summary><b>POST</b> /private/api/settings/storage/device/upload</summary>
 
  ---
 
