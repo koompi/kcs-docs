@@ -149,14 +149,15 @@
  | ---------------- | --------------------------------------- |
  |   Authorization  | `String` eg. `jwt_token_from_login_api` |
  
- Body with *file*
- ```json
- {
-   "parent_directory": "",
-   "drive_partuuid": "kmp"
- }
- ```
+ | Form Field Name  |                             Data Type                                 |
+ | ---------------- | ---------------------------------------------------------- |
+ |      files       | multipart/form-data *Can Upload 2 or more files with same field name* |
+ |  directory_name  |     `String` eg. myDir *Optional for uploading folder*                |
+ | parent_directory |                  `String` eg. rootdir/subdir                          |
+ |  drive_partuuid  |                  `String` eg. kmp                                     |
 
+
+ ![Sample](UploadAPI.png)
 
 
  Response 200 
