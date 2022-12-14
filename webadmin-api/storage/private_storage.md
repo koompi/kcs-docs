@@ -1,3 +1,5 @@
+<h1>Private Storage Page</h1>
+
 <details close="close">
 <summary><b>GET</b> /private/api/settings/storage/status</summary>
 

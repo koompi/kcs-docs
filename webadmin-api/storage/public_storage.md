@@ -1,4 +1,4 @@
-<h1>Storage Page</h1>
+<h1>Public Storage Page</h1>
 
 <details close="close">
 <summary><b>GET</b> /private/api/settings/storage/status/non_priv</summary>
