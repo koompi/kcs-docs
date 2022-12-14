@@ -1,36 +1,4 @@
 <details close="close">
-<summary><b>POST</b> /private/api/settings/storage/device/upload</summary>
-
- ---
-
- |      Header      |                 Data Type               |
- | ---------------- | --------------------------------------- |
- |   Authorization  | `String` eg. `jwt_token_from_login_api` |
- 
- | Form Field Name  |                             Data Type                                 |
- | ---------------- | ---------------------------------------------------------- |
- |      files       | multipart/form-data *Can Upload 2 or more files with same field name* |
- |  directory_name  |     `String` eg. myDir *Optional for uploading folder*                |
- | parent_directory |                  `String` eg. rootdir/subdir                          |
- |  drive_partuuid  |                  `String` eg. kmp                                     |
-
-
- ![Sample](UploadAPI.png)
-
-
- Response 200 
- ```json
- ```
-
- |     Error    |             Body           |
- | ------------ | -------------------------- |
- |     401      | Token invalid              |
- |     410      | Token expired or incorrect |
-
- ---
-</details>
-
-<details close="close">
 <summary><b>GET</b> /private/api/settings/storage/status</summary>
 
  ---
@@ -53,7 +21,8 @@
     },
     "free_space":  "3.3T",
     "total_space":  "3.6T",
-    "percentage":  4
+    "percentage":  4,
+    "public": true
   },
   {
     "drive_label":  "Removeable  Device",
@@ -62,7 +31,8 @@
     },
     "free_space":  "3.7G",
     "total_space":  "3.9G",
-    "percentage":  1
+    "percentage":  1,
+    "public": true
   },
   {
     "drive_label":  "Removeable  Device",
@@ -71,7 +41,8 @@
     },
     "free_space":  "4.0G",
     "total_space":  "4.0G",
-    "percentage":  1
+    "percentage":  1,
+    "public": true
   }
  ]
  ```
@@ -284,4 +255,61 @@
 
  ---
 
+</details>
+
+<details close="close">
+<summary><b>POST</b> /private/api/settings/storage/device/upload</summary>
+
+ ---
+
+ |      Header      |                 Data Type               |
+ | ---------------- | --------------------------------------- |
+ |   Authorization  | `String` eg. `jwt_token_from_login_api` |
+ 
+ | Form Field Name  |                             Data Type                                 |
+ | ---------------- | ---------------------------------------------------------- |
+ |      files       | multipart/form-data *Can Upload 2 or more files with same field name* |
+ |  directory_name  |     `String` eg. myDir *Optional for uploading folder*                |
+ | parent_directory |                  `String` eg. rootdir/subdir                          |
+ |  drive_partuuid  |                  `String` eg. kmp                                     |
+
+
+ ![Sample](UploadAPI.png)
+
+
+ Response 200 
+ ```json
+ ```
+
+ |     Error    |             Body           |
+ | ------------ | -------------------------- |
+ |     401      | Token invalid              |
+ |     410      | Token expired or incorrect |
+
+ ---
+</details>
+
+<details close="close">
+<summary><b>POST</b> /private/api/settings/storage/device/public_hosting/{drive_partuuid}</summary>
+
+ ---
+
+ |      Header      |                 Data Type               |
+ | ---------------- | --------------------------------------- |
+ |   Authorization  | `String` eg. `jwt_token_from_login_api` |
+ 
+ Body 
+ ```
+ ```
+
+ Response 200 
+ ```json
+ ```
+
+ |     Error    |             Body           |
+ | ------------ | -------------------------- |
+ |     401      | Token invalid              |
+ |     410      | Token expired or incorrect |
+
+ ---
 </details>

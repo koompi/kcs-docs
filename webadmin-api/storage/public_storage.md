@@ -23,7 +23,8 @@
     },
     "free_space":  "3.3T",
     "total_space":  "3.6T",
-    "percentage":  4
+    "percentage":  4,
+    "public": true
   },
   {
     "drive_label":  "Removeable  Device",
@@ -32,7 +33,8 @@
     },
     "free_space":  "3.7G",
     "total_space":  "3.9G",
-    "percentage":  1
+    "percentage":  1,
+    "public": true
   },
   {
     "drive_label":  "Removeable  Device",
@@ -41,7 +43,8 @@
     },
     "free_space":  "4.0G",
     "total_space":  "4.0G",
-    "percentage":  1
+    "percentage":  1,
+    "public": true
   }
  ]
  ```
