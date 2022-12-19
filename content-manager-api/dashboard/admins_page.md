@@ -252,7 +252,7 @@
 
  |      Header      |                 Data Type               |
  | ---------------- | --------------------------------------- |
- |      None        |                   None                  |
+ |  Authorization   |                 `String`                |
 
  |   Query String   |                       Data Type                            |
  | ---------------- | ---------------------------------------------------------- |
@@ -260,7 +260,7 @@
  |   result_limit   |        `Unsigned Integer 32 Bit` in `Row` eg. 1000         |
  |    page_number   |          `Unsigned Integer 32 Bit` in `page` eg. 3         |
 
- Eg. ``http://unicefbackend.koompi.app/public/api/search?search_string=កង្កែប&result_limit=2&page_number=3``
+ Eg. ``http://unicefbackend.koompi.app/private/api/admin/search?search_string=admin&result_limit=1&page_number=1``
  
  Body
  ```
