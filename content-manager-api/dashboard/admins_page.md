@@ -276,7 +276,7 @@
         "user_id": "8d225eb4-b6a2-4f7d-bfcf-39b833bfb840",
         "display_name": "Root",
         "username": "root",
-       "password": null,
+        "password": null,
         "role": "Root"
       },
       {
