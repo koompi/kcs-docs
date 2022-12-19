@@ -19,10 +19,10 @@
  Body
  ```json
  {
-    "display_name" : "Isaac Jackson Reay",
-    "username": "isaac",
-    "password": "123",
-    "role": "Admin"
+   "display_name" : "Isaac Jackson Reay",
+   "username": "isaac",
+   "password": "123",
+   "role": "Admin"
  }
  ```
 
@@ -68,28 +68,28 @@
  Body 1 (without changing password)
  ```json
  {
-    "display_name" : "New Isaac Jackson Reay",
-    "username": "isaac_new",
-    "role": "root",
+   "display_name" : "New Isaac Jackson Reay",
+   "username": "isaac_new",
+   "role": "root",
  }
  ```
 
  Body 2 (without changing role)
  ```json
  {
-    "display_name" : "New Isaac Jackson Reay",
-    "username": "isaac_new_new",
-    "password": "new_password_123",
+   "display_name" : "New Isaac Jackson Reay",
+   "username": "isaac_new_new",
+   "password": "new_password_123",
  }
  ```
 
   Body 3 (full)
  ```json
  {
-    "display_name" : "New Isaac Jackson Reay",
-    "username": "isaac",
-    "password": "new_password_123",
-    "role": "root"
+   "display_name" : "New Isaac Jackson Reay",
+   "username": "isaac",
+   "password": "new_password_123",
+   "role": "root"
  }
  ```
 
@@ -171,21 +171,21 @@
  Response 200 
  ```json
  [
-  {
-    "user_id": "8d225eb4-b6a2-4f7d-bfcf-39b833bfb840",
-    "display_name": "Root",
-    "username": "root",
-    "password": null,
-    "role": "Root"
-  },
-  {
-    "user_id": "92ee20e3-cb98-479d-9204-c5b4a472b2db",
-    "display_name": "Isaac",
-    "username": "isaac",
-    "password": null,
-    "role": "Admin"
-  }
-]
+   {
+     "user_id": "8d225eb4-b6a2-4f7d-bfcf-39b833bfb840",
+     "display_name": "Root",
+     "username": "root",
+     "password": null,
+     "role": "Root"
+   },
+   {
+     "user_id": "92ee20e3-cb98-479d-9204-c5b4a472b2db",
+     "display_name": "Isaac",
+     "username": "isaac",
+     "password": null,
+     "role": "Admin"
+   }
+ ]
  ```
 
  |     Error    |             Body           |
@@ -241,6 +241,65 @@
    - Only role `root` can perform this API. Anything else is 410 or 401
    - Only `exp` valid JWT will be allowed to use this API. Anything else is 410 or 401
    - example of UUID: `"76b4ff27-c39e-4ac8-b161-708f487b3f64"`
+
+ ---
+</details>
+
+<details close="close">
+<summary><b>GET</b> /public/api/search?</summary>
+
+ ---
+
+ |      Header      |                 Data Type               |
+ | ---------------- | --------------------------------------- |
+ |      None        |                   None                  |
+
+ |   Query String   |                       Data Type                            |
+ | ---------------- | ---------------------------------------------------------- |
+ |  search_string   |                  `String` eg. ឯកសារ.pdf                    |
+ |   result_limit   |        `Unsigned Integer 32 Bit` in `Row` eg. 1000         |
+ |    page_number   |          `Unsigned Integer 32 Bit` in `page` eg. 3         |
+
+ Eg. ``http://unicefbackend.koompi.app/public/api/search?search_string=កង្កែប&result_limit=2&page_number=3``
+ 
+ Body
+ ```
+ ```
+
+ Response 200 
+ ```json
+  {
+    "page_count": 3,
+    "current_page_number": 3,
+    "data": [
+      {
+        "user_id": "8d225eb4-b6a2-4f7d-bfcf-39b833bfb840",
+        "display_name": "Root",
+        "username": "root",
+       "password": null,
+        "role": "Root"
+      },
+      {
+        "user_id": "92ee20e3-cb98-479d-9204-c5b4a472b2db",
+        "display_name": "Isaac",
+        "username": "isaac",
+        "password": null,
+        "role": "Admin"
+      }
+    ]
+  }
+ ```
+
+ |     Error    |             Body           |
+ | ------------ | -------------------------- |
+ |     401      |             Gone           |
+ |     401      |          Unauthorized      |
+ |     500      |   actual_error_goes_here   |
+
+ - Note: 
+   - `Authorization` Header value is `Bearer`
+   - Only role `root` can perform this API. Anything else is 410 or 401
+   - Only `exp` valid JWT will be allowed to use this API. Anything else is 410 or 401
 
  ---
 </details>
