@@ -124,7 +124,7 @@
 
  |   Query String   |                   Data Type                                |
  | ---------------- | ---------------------------------------------------------- |
- |    item_name     |                  `String` eg. ឯកសារ.pdf                   |
+ |    item_name     |                  `String` eg. ឯកសារ.pdf                    |
  | parent_directory |                  `String` eg. rootdir/subdir               |
  |  drive_partuuid  |                  `String` eg. kmp                          |
  
