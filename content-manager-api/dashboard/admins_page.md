@@ -246,7 +246,7 @@
 </details>
 
 <details close="close">
-<summary><b>GET</b> /public/api/search?</summary>
+<summary><b>GET</b> /private/api/admin/search?</summary>
 
  ---
 
