@@ -152,7 +152,7 @@
 </details>
 
 <details close="close">
-<summary><b>GET</b> /private/api/admin/query</summary>
+<summary><b>GET</b> /private/api/admin/query/pagination?</summary>
 
  ---
 
@@ -164,28 +164,39 @@
  | ---------------- | --------------------------------------- |
  |       None       |                   None                  |
  
+ |   Query String   |                       Data Type                            |
+ | ---------------- | ---------------------------------------------------------- |
+ |   result_limit   |        `Unsigned Integer 32 Bit` in `Row` eg. 1000         |
+ |    page_number   |          `Unsigned Integer 32 Bit` in `page` eg. 3         |
+ 
+ Eg. ``http://unicefbackend.koompi.app/private/api/admin/query/pagination?result_limit=2&page_number=3``
+
  Body
  ```json
  ```
 
  Response 200 
  ```json
- [
-   {
-     "user_id": "8d225eb4-b6a2-4f7d-bfcf-39b833bfb840",
-     "display_name": "Root",
-     "username": "root",
-     "password": null,
-     "role": "Root"
-   },
-   {
-     "user_id": "92ee20e3-cb98-479d-9204-c5b4a472b2db",
-     "display_name": "Isaac",
-     "username": "isaac",
-     "password": null,
-     "role": "Admin"
-   }
- ]
+ {
+   "page_count": 1,
+   "current_page_number": 1,
+   "data": [
+     {
+       "user_id": "28672d53-e424-43ff-a8c4-c967ccc6c23e",
+       "display_name": "Root",
+       "username": "root",
+       "password": null,
+       "role": "Root"
+     },
+     {
+       "user_id": "d4211f53-0f86-4da9-a11f-b1c50c6d5cd6",
+       "display_name": "Admin",
+       "username": "admin",
+       "password": null,
+       "role": "Admin"
+     }
+   ]
+ }
  ```
 
  |     Error    |             Body           |
@@ -288,6 +299,61 @@
       }
     ]
   }
+ ```
+
+ |     Error    |             Body           |
+ | ------------ | -------------------------- |
+ |     401      |             Gone           |
+ |     401      |          Unauthorized      |
+ |     500      |   actual_error_goes_here   |
+
+ - Note: 
+   - `Authorization` Header value is `Bearer`
+   - Only role `root` can perform this API. Anything else is 410 or 401
+   - Only `exp` valid JWT will be allowed to use this API. Anything else is 410 or 401
+
+ ---
+</details>
+
+---
+
+<h2>To Be Deprecated</h2>
+
+<details close="close">
+<summary><b>GET</b> /private/api/admin/query</summary>
+
+ ---
+
+ |      Header      |                 Data Type               |
+ | ---------------- | --------------------------------------- |
+ |  Authorization   |                 `String`                |
+
+ |     Variable     |                 Data Type               |
+ | ---------------- | --------------------------------------- |
+ |       None       |                   None                  |
+ 
+ Body
+ ```json
+ ```
+
+ Response 200 
+ ```json
+ [
+   {
+     "user_id": "8d225eb4-b6a2-4f7d-bfcf-39b833bfb840",
+     "display_name": "Root",
+     "username": "root",
+     "password": null,
+     "role": "Root"
+   },
+   {
+     "user_id": "92ee20e3-cb98-479d-9204-c5b4a472b2db",
+     "display_name": "Isaac",
+     "username": "isaac",
+     "password": null,
+     "role": "Admin"
+   }
+ ]
  ```
 
  |     Error    |             Body           |
