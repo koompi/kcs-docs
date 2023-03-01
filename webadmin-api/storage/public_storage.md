@@ -211,3 +211,69 @@
 
  ---
 </details>
+
+<details close="close">
+<summary><b>GET</b> /private/api/settings/storage/device/search?</summary>
+
+ ---
+
+ |      Header      |                 Data Type               |
+ | ---------------- | --------------------------------------- |
+ |       None       |                   None                  |
+ 
+ | Query Parameters |        Data Type            |
+ | ---------------- | --------------------------- |
+ |      Search      |  `String` eg. `សៀវភៅ០១`   |
+ |  drive_partuuid  |      `String` eg. `kmp`     |
+
+ eg: `http://koompi.kh/private/api/settings/storage/device/search?search={}&drive_partuuid={}`
+
+ Body
+ ```json
+ ```
+
+ Response 200 
+ ```json
+ {
+   "drive_partuuid": "kmp",
+   "photo_size": "1.72 MB",
+   "photo_count": "21",
+   "audio_size": "0 B",
+   "audio_count": "0",
+   "video_size": "240.71 GB",
+   "video_count": "3349",
+   "file_size": "1.14 GB",
+   "file_count": "266",
+   "other_size": "37.92 MB",
+   "other_count": "52",
+   "children": [
+     {
+       "filename": "របៀបវារៈនៃសិក្ខាសាលា.pdf",
+       "file_meta": {
+         "item_last_modify_date": "2022-08-30 00:20:00",
+         "item_is_dir": false,
+         "item_size": 114080,
+         "item_mime_type": "application/pdf"
+       },
+       "parent_directory": ""
+     },
+     {
+       "filename": "Annex_1_Agenda_របៀបវារៈនៃសិក្ខាសាលា.pdf",
+       "file_meta": {
+         "item_last_modify_date": "2022-08-30 00:20:00",
+         "item_is_dir": false,
+         "item_size": 114080,
+         "item_mime_type": "application/pdf"
+       },
+       "parent_directory": "Hour Kheiv and Cheng Meng"
+     }
+   ]
+}
+ ```
+
+ |     Error    |             Body           |
+ | ------------ | -------------------------- |
+ |     None     | None                       |
+
+ ---
+</details>
